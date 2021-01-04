@@ -79,8 +79,9 @@ export function About() {
         <h3>The Geographic Encoding</h3>
         <p>
             I use a javascript implementation of <a href="https://s2geometry.io/">S2 Geometry</a> from
-            google.  S2 splits a sphere (the world is <span style={{}}>nearly</span> spherical)
-            into a hierarchy of cells, ordered according to a Hilbert curve.  Hilbert curves are
+            google/niantic.  It's the same system that Pokemon Go uses.  S2 splits a sphere
+            (the world is <span style={{}}>nearly</span> spherical) into a hierarchy of cells,
+            ordered according to a Hilbert curve.  Hilbert curves are
             great fun because they do something seemingly impossible - they map a 2d surface or even
             a 3d volume into a single 1d line. I first came across them in XKCD's map of the IPv4
             address space.

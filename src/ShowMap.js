@@ -175,13 +175,19 @@ function CellMarker({position, data, entryInProgress}) {
         {(showCell && corners) ? <Polygon pathOptions={{color: 'purple', fillOpacity: 0.1}} positions={corners} /> : <></>}
         {(data && !position) ? <Marker position={[data.decodedPosition.lat, data.decodedPosition.lng]} icon={blueIcon}>
             <Popup>
-                {data.phrase.join(" ")} {data.checkmoji}
+                <p>
+                    <span className="wherewords">{data.phrase.join(" ")}</span> <span className="checkmoji">{data.checkmoji}</span>
+                    <br/>
+                    Cell Center: <span className="latLng">{data.decodedPosition.lat},{data.decodedPosition.lng}</span>
+                    See on <a href={`https://www.google.com/maps/place/${data.decodedPosition.lat},${data.decodedPosition.lng}/@${data.decodedPosition.lat},${data.decodedPosition.lng},17z`}>google</a>
+                </p>
             </Popup>
         </Marker> : <></>}
         {position ? <Marker position={[position.lat, position.lng]} icon={pinkIcon}>
             <Popup>
-                <p>Selected location: <ul><li>lat: {position.lat}</li><li>lng: {position.lng}</li></ul></p>
-                {data ? <p>{data.phrase.join(" ")} {data.checkmoji}</p> : <></>}
+                {data ? <><span className="wherewords">{data.phrase.join(" ")}</span> <span className="checkmoji">{data.checkmoji}</span><br/></> : <></>}
+                Selected Location: <span className="latLng">{position.lat},{position.lng}</span><br/>
+                See on <a href={`https://www.google.com/maps/place/${position.lat},${position.lng}/@${position.lat},${position.lng},17z`}>google</a>
             </Popup>
         </Marker> : <></>}
     </>)

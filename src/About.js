@@ -6,8 +6,7 @@ export function About() {
         <p>I made it as a fun holiday side project over a few days at the
         beginning of 2021.  The code is available <a href="https://github.com/kybernetikos/wherewords">on github</a>.</p>
 
-        <p>Things still to do:
-        </p>
+        <p>Things still to do:</p>
         <ul>
             <li>Make it work off-line, as an app</li>
             <li>Allow searching for locations</li>
@@ -18,16 +17,15 @@ export function About() {
             <li>Pretty icons</li>
         </ul>
 
-        <p>
-            There are three key parts to a project like this.
-        </p>
+        <p>There are three key parts to a project like this.</p>
+
         <ol>
             <li>The Word List</li>
             <li>The Geographic Encoding</li>
             <li>The Website</li>
         </ol>
-        <p>
-            I thought that since I could take the word list from crypto seed phrases and the
+
+        <p>I thought that since I could take the word list from crypto seed phrases and the
             geographic encoding from google/niantics S2 library, then it'd be completely trivial.
             As it turned out, there were still a few wrinkles along the way.
         </p>
@@ -45,8 +43,7 @@ export function About() {
         be turned into the 156th word of a wordlist  and be maybe [carrot].</p>
 
         <p>I ended up spending way more time on the word list than I expected.  I started by thinking
-        I was very clever in using the
-        <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#Wordlist">BIP39 wordlist</a> which
+        that the job would be really easy, because I would just use the <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#Wordlist">BIP39 wordlist</a> which
         has avoided similar words and requires only the first four letters to unambiguously
         identify the word.  This wordlist has been carefully considered and is widely used by the
         cryptocurrency community to store seeds for wallets, e.g. for safe storage of bitcoin or
@@ -59,8 +56,7 @@ export function About() {
         <p>I started by making sure my code could run with wordlists of different sizes, and
         experimented with a number of different wordlists.  I tried a simple wordlist based on the
         nato phonetic alphabet which would require loads of words, but had the advantage of being
-        very distinguishable.  I tried the
-        <a href="https://github.com/bandrews/verbal-id#readme">verbal-id</a> wordlist, which has
+        very distinguishable.  I tried the <a href="https://github.com/bandrews/verbal-id#readme">verbal-id</a> wordlist, which has
         put effort into pronounceable, dinstinguishable and inclusive words (but only has 1024 of them).
         </p>
 
@@ -102,8 +98,7 @@ export function About() {
 
         <p>
             With my 4096 wordlist, each word gives me 12 bits of information, so with 4 words, I
-            have 48 addressible bits.  This is enough to use
-            <a href="https://s2geometry.io/resources/s2cell_statistics.html">level 22</a> S2 cells
+            have 48 addressible bits.  This is enough to use <a href="https://s2geometry.io/resources/s2cell_statistics.html">level 22</a> S2 cells
             (each level requires 4 bits), which gives me cell regions of approximately 2m x
             2m.
         </p>

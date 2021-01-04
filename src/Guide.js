@@ -4,7 +4,8 @@ export function Guide() {
     return (<div className="mainContent about">
 
         <p><b>wherewords.id</b> splits the world into approximately 105
-            trillion 2m x 2m squares and gives them each a four word name.</p>
+            trillion 2m x 2m squares and gives them each a four word name - the locations's
+            'wherewords'.</p>
 
         <p>Like "<Link to="/system/steep/according/you">system steep according you</Link>"
             which is a square just outside a bookshop in Niagara Falls, Canada.
@@ -46,14 +47,17 @@ export function Guide() {
         <h3>Checkmoji?</h3>
 
         <p>The emoji on the right hand side of the wherewords is a 'checkmoji'.  Each set of
-        wherewords generates an emoji out of 64 that goes with it.  If you want to make sure you've got the
-        wherewords right, you can compare emojis for an extra check. This is an entirely optional
-        extra step you can do if you want to be absolutely sure you've copied the words correctly.</p>
+        wherewords generates an emoji out of 64 commonly used emojis that goes with the wherewords.
+        If you want to make sure you've got the wherewords right, you can compare the emojis for an
+        extra check. This is an entirely optional extra step you can do if you want to be absolutely
+        sure you've copied the words correctly.</p>
 
         <h3>What about?</h3>
 
-        <p>Encoding data of any sort into words is trivial and obvious, so there are other similar
-            systems out there.</p>
+        <p>Encoding data of any sort into words is trivial, so there are other similar
+            systems out there.  For more details on how wherewords does it, see
+            <Link to="/+about">why?</Link>.</p>
+
         <ul>
             <li><a href="https://wolo.codes/about">wolo.codes</a></li>
             <li><a href="https://github.com/bandrews/verbal-id#readme">verbal-id</a></li>
@@ -61,12 +65,12 @@ export function Guide() {
             <li><a href="https://www.qalocate.com/solutions/geohashphrase/">Geohashphrase</a></li>
             <li><a href="https://what3words.com">what3words</a></li>
         </ul>
-        <p>
-            For any of these systems there are trade offs based on the size and quality of the
-            wordlist they use and the system they use for allocating the words to places on earth.
+
+        <p>For any of these systems there are trade-offs based on the size and quality of the
+            wordlist they use, how many words they need to represent a location and the particular
+            system they use for allocating the words to places on earth.
         </p>
-        <p>
-            Generally, smaller wordlists can be better curated to remove homophones, offensive words
+        <p>Generally, smaller wordlists can be better curated to remove homophones, offensive words
             etc, but will require more words in the code to define a position on Earth accurately.
         </p>
         <p>WhereWords uses a wordlist of 4096 words, which is small enough to be both manually and

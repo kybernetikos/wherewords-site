@@ -72,7 +72,7 @@ export function Guide() {
         <p>WhereWords uses a wordlist of 4096 words, which is small enough to be both manually and
             automatically curated for quality, and allows me to encode S2 regions (a standard
             system for dividing the world invented by google) into four words. For more detail on
-            how it all works, see <Link to="About">why?</Link>.
+            how it all works, see <Link to="/+about">why?</Link>.
         </p>
     </div>)
 }

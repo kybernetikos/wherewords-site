@@ -4,7 +4,8 @@ export function About() {
             trillion 2m x 2m squares and gives them each a four word name.</p>
 
         <p>I made it as a fun holiday side project over a few days at the
-        beginning of 2021.</p>
+        beginning of 2021.  The code is available
+            <a href="https://github.com/kybernetikos/wherewords">on github</a>.</p>
 
         <p>
             There are three key parts to a project like this.

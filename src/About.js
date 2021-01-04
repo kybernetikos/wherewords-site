@@ -20,11 +20,16 @@ export function About() {
 
         <p>
             There are three key parts to a project like this.
-            <ol>
-                <li>The Word List</li>
-                <li>The Geographic Encoding</li>
-                <li>The Website</li>
-            </ol>
+        </p>
+        <ol>
+            <li>The Word List</li>
+            <li>The Geographic Encoding</li>
+            <li>The Website</li>
+        </ol>
+        <p>
+            I thought that since I could take the word list from crypto seed phrases and the
+            geographic encoding from google/niantics S2 library, then it'd be completely trivial.
+            As it turned out, there were still a few wrinkles along the way.
         </p>
 
         <h3>The Word List</h3>

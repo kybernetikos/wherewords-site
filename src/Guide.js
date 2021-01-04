@@ -13,6 +13,10 @@ export function Guide() {
             point on the path up Mount Fuji, Japan.
         </p>
 
+        <p>wherewords that share common prefixes are close to each other, so if you use it a lot,
+            you'll quickly learn that wherewords starting <Link to="/bishop/quotation">bishop quotation</Link> are
+        in Bristol, UK. and wherewords starting <Link to="/bishop">bishop</Link> are in the UK.</p>
+
         <p>It's much easier to share the four word name for the point than it is to share a
             latitude and longitude number. For example, in the UK, sharing the wherewords is
             easier than sharing a postcode, and much more accurate. For more technical information

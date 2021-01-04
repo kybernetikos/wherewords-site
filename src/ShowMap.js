@@ -115,7 +115,6 @@ export function ShowMap({phrase, actual}) {
     </div>)
 }
 
-
 const pinkIcon = new Icon({
     iconUrl: markerIconPng,
     iconRetinaUrl: markerIconRetinaPng,
@@ -165,7 +164,6 @@ function CellMarker({position, data, entryInProgress}) {
     })
 
     if (!position && !data && !entryInProgress) {
-        // geolocates you....
         map.locate()
     }
 
@@ -176,18 +174,17 @@ function CellMarker({position, data, entryInProgress}) {
         {(data && !position) ? <Marker position={[data.decodedPosition.lat, data.decodedPosition.lng]} icon={blueIcon}>
             <Popup>
                 <p>
-                    <span className="wherewords">{data.phrase.join(" ")}</span> <span className="checkmoji">{data.checkmoji}</span>
-                    <br/>
-                    Cell Center: <span className="latLng">{data.decodedPosition.lat},{data.decodedPosition.lng}</span>
-                    See on <a href={`https://www.google.com/maps/place/${data.decodedPosition.lat},${data.decodedPosition.lng}/@${data.decodedPosition.lat},${data.decodedPosition.lng},17z`}>google</a>
+                    <span className="wherewords">{data.phrase.join(" ")}</span> <span className="checkmoji">{data.checkmoji}</span><br/>
+                    Cell Center: <span className="latLng">{data.decodedPosition.lat.toFixed(6)},{data.decodedPosition.lng.toFixed(6)}</span><br/>
+                    See on <a href={`https://www.google.com/maps/place/${data.decodedPosition.lat.toFixed(6)},${data.decodedPosition.lng.toFixed(6)}/@${data.decodedPosition.lat.toFixed(6)},${data.decodedPosition.lng.toFixed(6)},17z`}>google</a>
                 </p>
             </Popup>
         </Marker> : <></>}
         {position ? <Marker position={[position.lat, position.lng]} icon={pinkIcon}>
             <Popup>
                 {data ? <><span className="wherewords">{data.phrase.join(" ")}</span> <span className="checkmoji">{data.checkmoji}</span><br/></> : <></>}
-                Selected Location: <span className="latLng">{position.lat},{position.lng}</span><br/>
-                See on <a href={`https://www.google.com/maps/place/${position.lat},${position.lng}/@${position.lat},${position.lng},17z`}>google</a>
+                Selected Location: <span className="latLng">{Number(position.lat).toFixed(6)},{Number(position.lng).toFixed(6)}</span><br/>
+                See on <a href={`https://www.google.com/maps/place/${Number(position.lat).toFixed(6)},${Number(position.lng).toFixed(6)}/@${Number(position.lat).toFixed(6)},${Number(position.lng).toFixed(6)},17z`}>google</a>
             </Popup>
         </Marker> : <></>}
     </>)

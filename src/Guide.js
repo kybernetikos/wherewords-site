@@ -29,7 +29,7 @@ export function Guide() {
             find your position. Once it does, it will show it on the map and show you the wherewords
             that match your position. You will be asked to allow the app access to your
             location. If you do not allow it to, or your device does not support fine grained
-            location, then you can enter your position in another way.</p>
+            location, then you can navigate to your position using the map.</p>
 
         <h3>Find The wherewords For Another Position</h3>
 

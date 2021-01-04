@@ -1,38 +1,72 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+.header {
+  margin: 0;
+  flex-grow: 0;
+  color: white;
+  display: flex;
+  padding: 8px;
+  font-size: small;
+}
+
+.about {
+  background-color: #fafafa;
+  color: black;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.left {
+  flex-grow: 1;
+}
+
+.right {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.header a:visited {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.mainContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.map .status {
+  flex-grow: 0;
+  color: white;
+  display: flex;
+  padding: 8px;
+  font-size: x-large;
+  align-items: baseline;
+  background-color: #535353;
+}
+
+.map .leaflet-container {
+  height: 500px;
+  flex-grow: 1;
+}
+
+.adjusthue {
+  filter: hue-rotate(120deg);
 }

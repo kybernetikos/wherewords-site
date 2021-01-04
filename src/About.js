@@ -4,8 +4,7 @@ export function About() {
             trillion 2m x 2m squares and gives them each a four word name.</p>
 
         <p>I made it as a fun holiday side project over a few days at the
-        beginning of 2021.  The code is available
-            <a href="https://github.com/kybernetikos/wherewords">on github</a>.</p>
+        beginning of 2021.  The code is available <a href="https://github.com/kybernetikos/wherewords">on github</a>.</p>
 
         <p>
             There are three key parts to a project like this.
@@ -20,8 +19,9 @@ export function About() {
 
         <p>
             I ended up spending way more time on the word list than I expected.  I started by thinking
-            I was very clever in using the <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#Wordlist">BIP39 wordlist</a>
-            which has avoided similar words and requires only the first four letters to unambiguously
+            I was very clever in using the
+            <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#Wordlist">BIP39 wordlist</a> which
+            has avoided similar words and requires only the first four letters to unambiguously
             identify the word.  This wordlist has been carefully considered and is widely used by the
             cryptocurrency community to store seeds for wallets, e.g. for safe storage of bitcoin or
             ethereum.
@@ -34,9 +34,9 @@ export function About() {
         <p>I started by making sure my code could run with wordlists of different sizes, and
         experimented with a number of different wordlists.  I tried a simple wordlist based on the
         nato phonetic alphabet which would require loads of words, but had the advantage of being
-        very distinguishable.  I tried the <a href="https://github.com/bandrews/verbal-id#readme">verbal-id</a>
-        wordlist, which has put efort into pronounceable, dinstinguishable and inclusive words (but
-        only has 1024 of them).
+        very distinguishable.  I tried the
+        <a href="https://github.com/bandrews/verbal-id#readme">verbal-id</a> wordlist, which has
+        put effort into pronounceable, dinstinguishable and inclusive words (but only has 1024 of them).
         </p>
 
         <p>I also created my own wordlists.  I wrote code to take a large list of words and check
@@ -58,8 +58,8 @@ export function About() {
 
         <h3>The Geographic Encoding</h3>
         <p>
-            I use a javascript implementation of <a href="https://s2geometry.io/">S2 Geometry</a>
-            from google.  S2 splits a sphere (the world is <span style={{}}>nearly</span> spherical)
+            I use a javascript implementation of <a href="https://s2geometry.io/">S2 Geometry</a> from
+            google.  S2 splits a sphere (the world is <span style={{}}>nearly</span> spherical)
             into a hierarchy of cells, ordered according to a Hilbert curve.  Hilbert curves are
             great fun because they do something seemingly impossible - they map a 2d surface or even
             a 3d volume into a single 1d line. I first came across them in XKCD's map of the IPv4
@@ -76,8 +76,9 @@ export function About() {
 
         <p>
             With my 4096 wordlist, each word gives me 12 bits of information, so with 4 words, I
-            have 48 addressible bits.  This is enough to use <a href="https://s2geometry.io/resources/s2cell_statistics.html">level 22</a>
-            S2 cells (each level requires 4 bits), which gives me cell regions of approximately 2m x
+            have 48 addressible bits.  This is enough to use
+            <a href="https://s2geometry.io/resources/s2cell_statistics.html">level 22</a> S2 cells
+            (each level requires 4 bits), which gives me cell regions of approximately 2m x
             2m.
         </p>
 

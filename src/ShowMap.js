@@ -36,7 +36,8 @@ export function ShowMap({phrase, actual}) {
     let data = null
     let error = null
     try {
-        data = phrase ? decode(phrase) : (actual ? codeLatLng(actual) : null)
+        data = phrase ? decode(phrase.map(word => word.toLowerCase())) : (actual ? codeLatLng(actual) : null)
+        console.log(data)
     } catch (e) {
         error = `There is no location matching '${phrase.join(" ")}'`
     }

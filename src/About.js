@@ -9,12 +9,14 @@ export function About() {
         <p>Things still to do:</p>
         <ul>
             <li>Make it work off-line, as an app</li>
+            <li>Wordlist adjustments</li>
             <li>Allow searching for locations</li>
             <li>Better sharing of wherewords</li>
-            <li>Much better manual entry of the words</li>
+            <li>Much better and faster manual entry of the words.</li>
             <li>Better maps.  Maybe vectors?  Maybe for-pay?</li>
             <li>Publish wherewords to npm</li>
             <li>Pretty icons</li>
+            <li>Plug ins for other services. (See the how? page for a google maps bookmarklet)</li>
         </ul>
 
         <p>There are three key parts to a project like this.</p>
@@ -55,7 +57,8 @@ export function About() {
 
         <p>I started by making sure my code could run with wordlists of different sizes, and
         experimented with a number of different wordlists.  I tried a simple wordlist based on the
-        nato phonetic alphabet which would require loads of words, but had the advantage of being
+        nato phonetic alphabet which would require loads of words (e.g. 'decent juice guitar jail' becomes
+            'mike alfa delta charlie mike foxtrot charlie oscar golf november papa kilo'), but had the advantage of being
         very distinguishable.  I tried the <a href="https://github.com/bandrews/verbal-id#readme">verbal-id</a> wordlist, which has
         put effort into pronounceable, dinstinguishable and inclusive words (but only has 1024 of them).
         </p>

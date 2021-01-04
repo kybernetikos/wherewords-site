@@ -7,8 +7,8 @@ export function Guide() {
             trillion 2m x 2m squares and gives them each a four word name - the locations's
             'wherewords'.</p>
 
-        <p>Like "<Link to="/system/steep/according/you">system steep according you</Link>"
-            which is a square just outside a bookshop in Niagara Falls, Canada.
+        <p>Like "<Link to="/system/steep/according/you">system steep according you</Link>" which
+            is a square just outside a bookshop in Niagara Falls, Canada.
             Or "<Link to="/decent/juice/guitar/lawyer">decent juice guitar lawyer</Link>", a
             point on the path up Mount Fuji, Japan.
         </p>
@@ -38,8 +38,7 @@ export function Guide() {
             This will open an editor pane that allows you to choose the four wherewords.  Be aware
             that some possible combinations do not refer to a real place.  If it's easier, you can
             also just navigate directly to the location by entering the words separated by '/' into
-            your browser address bar.  For example
-            <Link to="/decent/juice/guitar/lawyer">decent juice guitar lawyer</Link> can be accessed
+            your browser address bar.  For example <Link to="/decent/juice/guitar/lawyer">decent juice guitar lawyer</Link> can be accessed
             by directly typing "wherewords.id/decent/juice/guitar/lawyer" into your browser address
             bar.
         </p>
@@ -55,8 +54,7 @@ export function Guide() {
         <h3>What about?</h3>
 
         <p>Encoding data of any sort into words is trivial, so there are other similar
-            systems out there.  For more details on how wherewords does it, see
-            <Link to="/+about">why?</Link>.</p>
+            systems out there.  For more details on how wherewords does it, see <Link to="/+about">why?</Link>.</p>
 
         <ul>
             <li><a href="https://wolo.codes/about">wolo.codes</a></li>

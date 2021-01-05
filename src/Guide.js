@@ -15,7 +15,7 @@ export function Guide() {
 
         <p>wherewords that share common prefixes are close to each other, so if you use it a lot,
             you'll quickly learn that wherewords starting <Link to="/bishop/quotation">bishop quotation</Link> are
-            in Bristol in the UK, while all wherewords starting <Link to="/bishop">bishop</Link> are
+            in Bristol in the UK, while most wherewords starting <Link to="/bishop">bishop</Link> are
             in the UK.</p>
 
         <p>It's much easier to share the four word name for the point than it is to share a
@@ -51,11 +51,14 @@ export function Guide() {
         <h3>Using wherewords with Google Maps</h3>
 
         <p>If you're familiar with bookmarklets, you can use this. Make sure your bookmark bar
-            is visible, then drag this link up to the bookmark bar: <a href={`javascript:(function() { var placeRE = /!3d(?<lat>[\d\.-]+)!4d(?<lng>[\d\.-]+)/;     var centerRE = /[@=](?<lat>[\d\.-]+),(?<lng>[\d\.-]+),/;     var match = placeRE.exec(window.location) || centerRE.exec(window.location);     if (match) {document.location="https://wherewords.id/"+match.groups.lat+","+match.groups.lng} else {window.alert("Unable to identify a position.")} })()`}>gMap wherewords</a>.
+            is visible, then drag this link up to the bookmark bar: <a href={`javascript:(function() { var placeRE = /!3d(?<lat>[\\d\\.-]+)!4d(?<lng>[\\d\\.-]+)/;     var centerRE = /[@=](?<lat>[\\d\\.-]+),(?<lng>[\\d\\.-]+),/;     var match = placeRE.exec(window.location) || centerRE.exec(window.location);     if (match) {document.location="https://wherewords.id/"+match.groups.lat+","+match.groups.lng} else {window.alert("Unable to identify a position.")} })()`}>gMap wherewords</a>.
             When you're looking at a place in google maps, if you click the bookmark, it will take
             you to the wherewords for the place you are looking at.  If no place is selected, it
             will take you to the wherewords for the center of the map.
         </p>
+
+        <p>Click the markers on the wherewords map to find a link that will take you to a google map
+            of the location.</p>
 
         <h3>Checkmoji?</h3>
 
